@@ -13,12 +13,10 @@ import java.util.EnumSet;
 
 public class BotLauncher {
     public static JDA bot;
-
+    public static final String BOT_TOKEN = System.getenv("BOT_TOKEN");
     public static void main(String[] args) throws LoginException, InterruptedException {
 
-
-
-        bot = JDABuilder.create(System.getenv("BOT_TOKEN"),
+        bot = JDABuilder.create(BOT_TOKEN,
                         EnumSet.allOf(GatewayIntent.class))
                 .setActivity(Activity.playing("?????"))
                 .build();
