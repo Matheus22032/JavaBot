@@ -1,4 +1,4 @@
-package me.botdiscod.commands;
+package me.botdiscod.events;
 
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.guild.member.update.GuildMemberUpdateNicknameEvent;
@@ -11,7 +11,6 @@ public class ChangeNickname extends ListenerAdapter {
     public void onGuildMemberUpdateNickname(GuildMemberUpdateNicknameEvent event) {
 
         List<TextChannel> textChannels = event.getGuild().getTextChannelsByName("geral", true);
-
 
         for (TextChannel ch :
                 textChannels) {
