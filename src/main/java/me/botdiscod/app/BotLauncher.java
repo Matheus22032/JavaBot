@@ -1,5 +1,6 @@
 package me.botdiscod.app;
 
+import me.botdiscod.commands.ChangePrefix;
 import me.botdiscod.database.CRUD;
 import me.botdiscod.events.ChangeNickname;
 import me.botdiscod.commands.JoinAndLeftChannel;
@@ -29,6 +30,7 @@ public class BotLauncher {
         bot.addEventListener(new Ping());
         bot.addEventListener(new JoinAndLeftChannel());
         bot.addEventListener(new ChangeNickname());
+        bot.addEventListener(new ChangePrefix());
 
         CRUD.createTable();
         for (Guild guild:
